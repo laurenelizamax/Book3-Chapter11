@@ -25,4 +25,22 @@ for (const value of Object.values(bill)) {
   for (const entry of Object.entries(bill)) {
       console.log(entry[0],": ", entry[1]);
   }
+//   const outputElement = document.querySelector("#doctor")
 
+  const firstBill = bill[0]
+
+  // Now iterate its keys
+  outputElement.innerHTML += "<h1>Bill</h1>"
+  for (const key of Object.keys(firstBill)) {
+    outputElement.innerHTML += `<div>${key}</div>`
+  }
+  
+  // Iterate the array of cars. Individual objects stored in `car`.
+  outputElement.innerHTML += "<h1>Doctor</h1>"
+  bill.forEach(bill => {
+  
+      // Iterate all of the values of the current car
+      for (const value of Object.values(bill)) {
+        outputElement.innerHTML += `<div>${value}</div>`
+      }
+  })
